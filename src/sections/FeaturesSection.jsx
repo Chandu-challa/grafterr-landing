@@ -82,15 +82,22 @@ const FeaturesSection = ({ data, loading, error, onRetry }) => {
             <div className="features-section__shape features-section__shape--right"></div>
           </div>
           <h2 className="features-section__title">
-            {title}{' '}
-            <GradientText>{titleAccent}</GradientText>
+            {title.includes('Grafterr') ? (
+              <>
+                {title.split('Grafterr')[0]}
+                <span style={{ color: '#9CA3AF' }}>Grafterr</span>
+                {title.split('Grafterr')[1]}
+              </>
+            ) : title}
+            <br />
+            <span className="features-section__title-accent">{titleAccent}</span>
           </h2>
+          
+          <p className="features-section__subtitle">{subtitle}</p>
           
           {featuresSection.divider && (
             <div className="features-section__divider" />
           )}
-          
-          <p className="features-section__subtitle">{subtitle}</p>
         </div>
 
         <div className="features-section__carousel fade-in">

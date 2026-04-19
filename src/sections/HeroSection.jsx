@@ -45,19 +45,6 @@ const HeroSection = ({ data, loading, error, onRetry }) => {
 
   return (
     <section className="hero-section">
-      {/* Decorative Shapes */}
-      {decorativeShapes && Object.entries(decorativeShapes).map(([key, shape]) => (
-        <FloatingShape
-          key={key}
-          type={key.includes('Circle') ? 'circle' : 'rectangle'}
-          color={shape.color}
-          size={shape.size}
-          width={shape.width}
-          height={shape.height}
-          position={shape.position}
-        />
-      ))}
-            
       <div className="container">
         <div className="hero-section__content fade-in">
           <div className="hero-section__headline">

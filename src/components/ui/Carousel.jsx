@@ -23,19 +23,19 @@ const Carousel = ({ items, itemsPerView = 3, showArrows = true, className = '' }
 
   return (
     <div className={`carousel ${className}`}>
-      <div 
+      <div
         className="carousel__container"
         ref={carouselRef}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div 
+        <div
           className={`carousel__track ${isTransitioning ? 'carousel__track--transitioning' : ''}`}
           style={{ transform: `translateX(-${translateX}%)` }}
         >
           {items.map((item, index) => (
-            <div 
+            <div
               key={item.id || index}
               className="carousel__slide"
               style={{ width: `${100 / itemsPerView}%` }}
@@ -48,30 +48,33 @@ const Carousel = ({ items, itemsPerView = 3, showArrows = true, className = '' }
 
       {showArrows && (
         <div className="carousel__navigation">
+
           <button
-            className={`carousel__arrow carousel__arrow--prev ${!canGoPrev ? 'carousel__arrow--disabled' : ''}`}
+            className={`carousel__arrow ${!canGoPrev ? 'disabled' : ''}`}
             onClick={prev}
             disabled={!canGoPrev}
-            aria-label="Previous slide"
+            aria-label="Previous"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5" />
+              <path d="M12 19l-7-7 7-7" />
             </svg>
           </button>
-          
+
           <button
-            className={`carousel__arrow carousel__arrow--next ${!canGoNext ? 'carousel__arrow--disabled' : ''}`}
+            className={`carousel__arrow ${!canGoNext ? 'disabled' : ''}`}
             onClick={next}
             disabled={!canGoNext}
-            aria-label="Next slide"
+            aria-label="Next"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14" />
+              <path d="M12 5l7 7-7 7" />
             </svg>
           </button>
+
         </div>
       )}
-
       {/* Dots indicator */}
       <div className="carousel__dots">
         {Array.from({ length: maxIndex + 1 }, (_, index) => (

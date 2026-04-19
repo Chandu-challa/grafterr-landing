@@ -36,15 +36,15 @@
       "url": "#learn-more"
     },
     "decorativeShapes": {
-      "lightBlueCircle": {
-        "color": "#E3F2FD",
-        "size": "120px",
+      "tealCircle": {
+        "color": "#14B8A6",
+        "size": "30px",
         "position": "left"
       },
-      "redRectangle": {
-        "color": "#FF5252",
-        "width": "80px",
-        "height": "120px",
+      "coralRectangle": {
+        "color": "#FB7185",
+        "width": "30px",
+        "height": "30px",
         "position": "right"
       }
     }
