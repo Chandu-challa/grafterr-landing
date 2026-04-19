@@ -1,0 +1,95 @@
+{
+  "navigation": {
+    "logo": {
+      "src": "/images/logo.png",
+      "alt": "Grafterr Logo"
+    },
+    "links": [
+      {
+        "name": "Products",
+        "url": "#products"
+      },
+      {
+        "name": "Solutions",
+        "url": "#solutions"
+      },
+      {
+        "name": "Pricing",
+        "url": "#pricing"
+      },
+      {
+        "name": "About",
+        "url": "#about"
+      }
+    ],
+    "cta": {
+      "text": "Contact Us",
+      "url": "#contact"
+    }
+  },
+  "hero": {
+    "headlinePrefix": "Looking for a new",
+    "headlineGradient": "technology provider?",
+    "subheadline": "Explore our <strong>success stories</strong> to see how businesses like yours have transformed with Grafterr's technology.",
+    "cta": {
+      "text": "Learn more",
+      "url": "#learn-more"
+    },
+    "decorativeShapes": {
+      "lightBlueCircle": {
+        "color": "#E3F2FD",
+        "size": "120px",
+        "position": "left"
+      },
+      "redRectangle": {
+        "color": "#FF5252",
+        "width": "80px",
+        "height": "120px",
+        "position": "right"
+      }
+    }
+  },
+  "featuresSection": {
+    "title": "More ways Grafterr can help you",
+    "titleAccent": "grow your business",
+    "subtitle": "An award-winning, end-to-end restaurant technology & payments platform, designed to streamline food service and automate complex venue operations",
+    "divider": true,
+    "products": [
+      {
+        "id": 1,
+        "title": "Point of Sale",
+        "image": "/images/pos-system.png",
+        "description": "Complete POS solution for restaurants"
+      },
+      {
+        "id": 2,
+        "title": "Self-service",
+        "image": "/images/self-service.png",
+        "description": "Customer self-ordering kiosks"
+      },
+      {
+        "id": 3,
+        "title": "Kitchen Management",
+        "image": "/images/kitchen-management.png",
+        "description": "Streamline kitchen operations"
+      }
+    ]
+  },
+  "carousel": {
+    "itemsPerView": {
+      "mobile": 1,
+      "tablet": 2,
+      "desktop": 3
+    },
+    "showArrows": true,
+    "transitionDuration": 300,
+    "enableTouch": true
+  },
+  "loading": {
+    "skeletonCount": 3
+  },
+  "error": {
+    "message": "Failed to load content. Please try again.",
+    "retryText": "Retry"
+  }
+}

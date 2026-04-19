@@ -1,0 +1,65 @@
+.gradient-button {
+  background: var(--gradient-button);
+  color: white;
+  padding: 0;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  width: 318px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: -0.5px;
+  font-family: var(--font-family);
+}
+
+.gradient-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gradient-button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md);
+}
+
+.gradient-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left var(--transition-slow);
+}
+
+.gradient-button:hover::before {
+  left: 100%;
+}
+
+.gradient-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.gradient-button:disabled:hover {
+  transform: none;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .gradient-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    min-height: 44px;
+  }
+}

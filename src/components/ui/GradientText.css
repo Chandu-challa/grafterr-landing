@@ -1,0 +1,25 @@
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.gradient-text--large {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .gradient-text--large {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (max-width: 375px) {
+  .gradient-text--large {
+    font-size: var(--font-size-3xl);
+  }
+}
